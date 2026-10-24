@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | Inkwell & Co.</title>
+  <meta name="description" content="Detailed view of charming books, journals, and stationery at Inkwell & Co.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖋️</text></svg>">
+</head>
+<body>
+
+  <!-- Top Announcement Promo Strip -->
+  <div class="promo-strip">
+    Free shipping on orders over $35! <span>Use code HAPPYPAGES for 10% off</span> ✨
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-icon">🖋️</span>
+        <span class="brand-text">Inkwell <span>&</span> Co.</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link active">Shop</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="login.html" class="nav-icon-btn" title="Account / Sign In" aria-label="Account">
+          👤
+        </a>
+        <a href="cart.html" class="cart-btn" aria-label="View shopping cart">
+          <span>🛒</span>
+          <span>Cart</span>
+          <span class="cart-badge">0</span>
+        </a>
+        <button class="hamburger-btn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer">
+    <a href="index.html" class="nav-link">Home 🏡</a>
+    <a href="shop.html" class="nav-link active">Shop All Products 📚</a>
+    <a href="about.html" class="nav-link">Our Story ☕</a>
+    <a href="contact.html" class="nav-link">Get in Touch 💌</a>
+    <a href="login.html" class="nav-link">Member Sign In 👤</a>
+    <a href="cart.html" class="nav-link">Shopping Cart 🛒</a>
+  </aside>
+
+  <main>
+    <section class="product-detail-section" id="product-detail-view">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">›</span>
+          <a href="shop.html">Shop</a>
+          <span class="breadcrumb-sep">›</span>
+          <a href="shop.html" id="breadcrumb-category">Books</a>
+          <span class="breadcrumb-sep">›</span>
+          <span id="breadcrumb-title" style="color:var(--color-ink); font-weight:700;">Loading...</span>
+        </nav>
+
+        <!-- Product Presentation Grid -->
+        <div class="product-detail-grid">
+          <!-- Gallery / Media -->
+          <div class="product-gallery">
+            <div class="product-main-view">
+              <div id="detail-badge"></div>
+              <img id="detail-main-img" src="" alt="Product View">
+            </div>
+            <div style="margin-top:1rem; display:flex; gap:0.75rem; justify-content:center;">
+              <span style="font-size:0.85rem; color:var(--color-muted);">🔍 Hover to inspect texture & craftsmanship</span>
+            </div>
+          </div>
+
+          <!-- Product Details & Add to Cart -->
+          <div class="product-info-panel">
+            <span id="detail-category" class="product-cat" style="font-size:0.88rem;">Category</span>
+            <h1 id="detail-title">Loading Product Title</h1>
+
+            <div id="detail-rating" class="product-rating">
+              <!-- Rating stars -->
+            </div>
+
+            <div class="product-detail-price">
+              <span id="detail-current-price" class="detail-price-current">$0.00</span>
+              <span id="detail-original-price" class="detail-price-original"></span>
+              <span id="detail-discount-tag" class="detail-discount-tag"></span>
+            </div>
+
+            <p id="detail-description" class="product-desc-lead">
+              Product description goes here.
+            </p>
+
+            <div class="stock-status">
+              In Stock — Hand-packed & ready to ship
+            </div>
+
+            <!-- Quantity & Actions -->
+            <div class="add-cart-action-group">
+              <div class="qty-control">
+                <button type="button" id="detail-qty-minus" class="qty-btn" aria-label="Decrease quantity">−</button>
+                <input type="number" id="detail-qty-input" class="qty-input" value="1" min="1" max="99" aria-label="Item quantity">
+                <button type="button" id="detail-qty-plus" class="qty-btn" aria-label="Increase quantity">+</button>
+              </div>
+
+              <button id="detail-add-to-cart" class="btn btn-teal btn-lg" style="flex:1;">
+                <span>🛒 Add to Cart</span>
+              </button>
+
+              <button id="detail-wishlist-btn" class="btn btn-outline" style="border-radius:var(--radius-pill);" aria-label="Wishlist">
+                ♡ Add to Wishlist
+              </button>
+            </div>
+
+            <!-- Perks Summary Box -->
+            <div class="product-perks-box">
+              <div class="perk">
+                <span>🚚</span>
+                <span><strong>Free delivery</strong> on all orders over $35</span>
+              </div>
+              <div class="perk">
+                <span>🌱</span>
+                <span>Plastic-free, 100% recyclable archival packaging</span>
+              </div>
+              <div class="perk">
+                <span>🔖</span>
+                <span>Includes our collectible pressed wildflower bookmark</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Tabbed Information Section -->
+        <div class="product-tabs-section">
+          <div class="tabs-nav" role="tablist">
+            <button class="tab-btn active" data-tab="tab-description" role="tab">Story & Inspiration</button>
+            <button class="tab-btn" data-tab="tab-specs" role="tab">Specifications</button>
+            <button class="tab-btn" data-tab="tab-reviews" role="tab">Customer Reviews</button>
+          </div>
+
+          <!-- Tab 1: Description -->
+          <div id="tab-description" class="tab-content active" role="tabpanel">
+            <h3 style="margin-bottom:1rem; font-size:1.4rem;">Crafted for Thoughtful Moments</h3>
+            <p style="font-size:1.05rem; line-height:1.75; color:var(--color-ink-light); margin-bottom:1.5rem;">
+              At Inkwell & Co., every item in our shop is selected for its sensory delight and tactile warmth. Whether you're sinking into an immersive storyline on a rainy evening, mapping out your dreams across un-dated planner spreads, or letting fountain pen ink flow across heavy bamboo paper, this piece was made to accompany your creative journey.
+            </p>
+            <div style="background-color: var(--color-cream); border-left: 4px solid var(--color-primary); padding: 1.25rem 1.5rem; border-radius: var(--radius-md);">
+              <p style="font-style:italic; margin-bottom:0; color:var(--color-ink);">
+                "A room without books is like a body without a soul — and a notebook without ink is an adventure waiting to begin."
+              </p>
+            </div>
+          </div>
+
+          <!-- Tab 2: Specs -->
+          <div id="tab-specs" class="tab-content" role="tabpanel">
+            <h3 style="margin-bottom:1.25rem; font-size:1.4rem;">Product Specifications</h3>
+            <table class="details-table">
+              <tbody id="product-specs-table">
+                <!-- Dynamically populated from product.details -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Tab 3: Reviews -->
+          <div id="tab-reviews" class="tab-content" role="tabpanel">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem; flex-wrap:wrap; gap:1rem;">
+              <h3 style="font-size:1.4rem;">Reader Thoughts & Reviews</h3>
+              <span class="stars" style="font-size:1.3rem;">★★★★★ <span style="font-size:1rem; color:var(--color-ink); font-weight:700;">4.9 / 5.0 Average</span></span>
+            </div>
+
+            <!-- Write a Review Form -->
+            <div style="background-color:var(--color-cream); padding:1.75rem; border-radius:var(--radius-lg); margin-bottom:2.5rem; border:1.5px solid var(--color-border);">
+              <h4 style="font-size:1.15rem; margin-bottom:0.75rem;">Leave a Gentle Review</h4>
+              <form id="review-form">
+                <div class="form-grid" style="margin-bottom:1rem;">
+                  <div>
+                    <label class="form-label" for="review-author-name">Your Name</label>
+                    <input type="text" id="review-author-name" class="form-input" placeholder="e.g. Clara Oswald" required>
+                  </div>
+                  <div>
+                    <label class="form-label" for="review-rating-select">Rating</label>
+                    <select id="review-rating-select" class="form-select">
+                      <option value="5">★★★★★ (5 Stars - Magnificent!)</option>
+                      <option value="4">★★★★☆ (4 Stars - Really Loved It)</option>
+                      <option value="3">★★★☆☆ (3 Stars - Good)</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-full">
+                    <label class="form-label" for="review-text">Your Review</label>
+                    <textarea id="review-text" class="form-textarea" rows="3" placeholder="Share how this item brought warmth to your writing or reading..." required></textarea>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-teal btn-sm">Submit Review ✍️</button>
+              </form>
+            </div>
+
+            <!-- Existing sample reviews -->
+            <div id="reviews-list">
+              <div class="review-item">
+                <div class="review-header">
+                  <span class="review-author">Beatrice Vance</span>
+                  <span class="review-date">3 days ago</span>
+                </div>
+                <div class="stars" style="margin-bottom:0.4rem;">★★★★★</div>
+                <p>The quality exceeded my wildest expectations! The tactile paper feel and exquisite binding make opening this every morning a quiet ritual I cherish.</p>
+              </div>
+
+              <div class="review-item">
+                <div class="review-header">
+                  <span class="review-author">Liam S.</span>
+                  <span class="review-date">2 weeks ago</span>
+                </div>
+                <div class="stars" style="margin-bottom:0.4rem;">★★★★★</div>
+                <p>Arrived in the prettiest plastic-free packaging with a lovely handwritten note. Will definitely be gifting several to fellow bibliophile friends!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Products Section -->
+        <div style="margin-top: 5rem;">
+          <div class="section-title-wrap">
+            <span class="section-subtitle">Curator's Pairing</span>
+            <h2 class="section-title">You May Also Like</h2>
+            <p class="section-desc">Hand-picked companions that pair beautifully with this item.</p>
+          </div>
+
+          <div id="related-products-grid" class="products-grid">
+            <!-- 4 related items -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <span class="logo-icon">🖋️</span>
+            <span class="brand-text">Inkwell <span>&</span> Co.</span>
+          </a>
+          <p class="footer-tagline">Where every page is an adventure. An independent bookstore and stationery studio founded with warm tea & big dreams.</p>
+          <div class="footer-social-row">
+            <a href="#" class="social-icon-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-icon-link" aria-label="Pinterest">📌</a>
+            <a href="#" class="social-icon-link" aria-label="Goodreads">📚</a>
+            <a href="#" class="social-icon-link" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Shop Aisle</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=Fiction+books">Fiction Books</a></li>
+            <li><a href="shop.html?category=Non-Fiction+books">Non-Fiction Books</a></li>
+            <li><a href="shop.html?category=Notebooks">Dot Grid Notebooks</a></li>
+            <li><a href="shop.html?category=Pens">Brass Fountain Pens</a></li>
+            <li><a href="shop.html?category=Planners">Life Planners</a></li>
+            <li><a href="shop.html?category=Washi+tape">Washi Tape</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="about.html#team">Meet the Bookworms</a></li>
+            <li><a href="contact.html">Store Location & Hours</a></li>
+            <li><a href="contact.html#faq">Shipping & FAQ</a></li>
+            <li><a href="cart.html">View Cart</a></li>
+            <li><a href="login.html">My Account</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Visit Our Shop</h4>
+          <p style="color:#B0A89C; font-size:0.92rem; margin-bottom: 0.75rem;">
+            📍 42 Storybook Lane<br>Inkwood Village, NY 10014
+          </p>
+          <p style="color:#B0A89C; font-size:0.92rem; margin-bottom: 0.75rem;">
+            🕒 Mon – Sat: 9:00 AM – 7:30 PM<br>Sunday: 10:00 AM – 5:00 PM
+          </p>
+          <p style="color:#B0A89C; font-size:0.92rem;">
+            📞 (555) 732-3486<br>✉️ hello@inkwellco.com
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Inkwell & Co. Books & Stationery. All rights reserved.</p>
+        <p>Crafted with 💛, warm tea, and lots of paper love.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

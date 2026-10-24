@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inkwell & Co. — Where every page is an adventure</title>
+  <meta name="description" content="Charming books & stationery shop featuring curated fiction, non-fiction, dot grid journals, fountain pens, washi tape, and cozy reading accessories.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖋️</text></svg>">
+</head>
+<body>
+
+  <!-- Top Announcement Promo Strip -->
+  <div class="promo-strip">
+    Free shipping on orders over $35! <span>Use code HAPPYPAGES for 10% off</span> ✨
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-icon">🖋️</span>
+        <span class="brand-text">Inkwell <span>&</span> Co.</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="login.html" class="nav-icon-btn" title="Account / Sign In" aria-label="Account">
+          👤
+        </a>
+        <a href="cart.html" class="cart-btn" aria-label="View shopping cart">
+          <span>🛒</span>
+          <span>Cart</span>
+          <span class="cart-badge">0</span>
+        </a>
+        <button class="hamburger-btn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer">
+    <a href="index.html" class="nav-link">Home 🏡</a>
+    <a href="shop.html" class="nav-link">Shop All Products 📚</a>
+    <a href="about.html" class="nav-link">Our Story ☕</a>
+    <a href="contact.html" class="nav-link">Get in Touch 💌</a>
+    <a href="login.html" class="nav-link">Member Sign In 👤</a>
+    <a href="cart.html" class="nav-link">Shopping Cart 🛒</a>
+  </aside>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-tagline">
+              <span class="star-icon">✨</span> Warm, Mindful & Curated Reading
+            </div>
+            <h1 class="hero-title">
+              Where every page is <span class="highlight-yellow">an adventure</span> and every note <span class="highlight-coral">sparks joy</span>.
+            </h1>
+            <p class="hero-description">
+              Step into our cozy literary haven. Discover timeless fiction, heavyweight dot-grid journals, buttery brass fountain pens, and whimsical stickers crafted for dreamers.
+            </p>
+            <div class="hero-cta-group">
+              <a href="shop.html" class="btn btn-teal btn-lg">Explore Shop 📖</a>
+              <a href="about.html" class="btn btn-outline btn-lg">Our Story ☕</a>
+            </div>
+
+            <div class="hero-perks">
+              <div class="hero-perk-item">
+                <span class="icon">🌿</span>
+                <span>Eco-Friendly Paper</span>
+              </div>
+              <div class="hero-perk-item">
+                <span class="icon">📦</span>
+                <span>Free Ship $35+</span>
+              </div>
+              <div class="hero-perk-item">
+                <span class="icon">⭐</span>
+                <span>4.9 / 5 Loved</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-card-stack">
+              <div class="floating-badge badge-top-left">
+                <span class="badge-icon">📚</span>
+                <div class="badge-text">
+                  <strong>Staff Pick of the Week</strong>
+                  <span>Midnight Library</span>
+                </div>
+              </div>
+
+              <img 
+                src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80" 
+                alt="Cozy bookstore corner with open hardcover book and hot cup of tea"
+                class="hero-main-img"
+              >
+
+              <div class="floating-badge badge-bottom-right">
+                <span class="badge-icon">🖋️</span>
+                <div class="badge-text">
+                  <strong>Solid Raw Brass</strong>
+                  <span>Artisan Fountain Nib</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Categories Section -->
+    <section class="categories-section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-subtitle">Curated Aisles</span>
+          <h2 class="section-title">Explore by Category</h2>
+          <p class="section-desc">Hand-picked treasures organized to help you discover your next great read or writing companion.</p>
+        </div>
+
+        <div class="categories-grid">
+          <a href="shop.html?category=Fiction+books" class="category-card" style="--card-color: #FF6B6B;">
+            <div class="icon-circle">📖</div>
+            <h3>Fiction & Stories</h3>
+            <p>Captivating cozy mysteries, fantasy worlds & literary treasures.</p>
+            <span class="card-cta">Browse Books →</span>
+          </a>
+
+          <a href="shop.html?category=Notebooks" class="category-card" style="--card-color: #4ECDC4;">
+            <div class="icon-circle">📓</div>
+            <h3>Linen Notebooks</h3>
+            <p>160gsm bleed-proof bamboo paper & lay-flat binding.</p>
+            <span class="card-cta">Browse Journals →</span>
+          </a>
+
+          <a href="shop.html?category=Pens" class="category-card" style="--card-color: #FFD93D;">
+            <div class="icon-circle">✒️</div>
+            <h3>Writing Instruments</h3>
+            <p>Vintage brass fountain pens, muted pastels & calligraphy brush tips.</p>
+            <span class="card-cta">Browse Pens →</span>
+          </a>
+
+          <a href="shop.html?category=Planners" class="category-card" style="--card-color: #A0C4FF;">
+            <div class="icon-circle">🗓️</div>
+            <h3>Cozy Planners</h3>
+            <p>Undated spreads, habit trackers, and mindful goal setting.</p>
+            <span class="card-cta">Browse Planners →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bestsellers Grid -->
+    <section class="products-section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-subtitle">Reader Favorites</span>
+          <h2 class="section-title">Inkwell Bestsellers</h2>
+          <p class="section-desc">The stories, journals, and stationery our community can't stop raving about.</p>
+        </div>
+
+        <div id="home-bestsellers-grid" class="products-grid">
+          <!-- Dynamically populated via js/main.js -->
+        </div>
+
+        <div class="text-center" style="margin-top: 3.5rem;">
+          <a href="shop.html" class="btn btn-teal btn-lg">View All 18 Products in Shop →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Props / Why Inkwell -->
+    <section class="value-props-section">
+      <div class="container">
+        <div class="value-props-grid">
+          <div class="value-prop-card">
+            <div class="value-prop-icon">🚚</div>
+            <div>
+              <h4>Free Speedy Shipping</h4>
+              <p>On all domestic orders over $35 with compostable mailers.</p>
+            </div>
+          </div>
+          <div class="value-prop-card">
+            <div class="value-prop-icon">🌱</div>
+            <div>
+              <h4>Eco-Conscious</h4>
+              <p>FSC-certified paper, soy inks, and plastic-free packaging.</p>
+            </div>
+          </div>
+          <div class="value-prop-card">
+            <div class="value-prop-icon">🎁</div>
+            <div>
+              <h4>Artisan Care</h4>
+              <p>Every order arrives lovingly wrapped with a collectible bookmark.</p>
+            </div>
+          </div>
+          <div class="value-prop-card">
+            <div class="value-prop-icon">💛</div>
+            <div>
+              <h4>Happiness Guaranteed</h4>
+              <p>30-day cozy reading exchange policy on every purchase.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-card">
+          <h2>Join the Inkwell Book Club</h2>
+          <p>Get gentle literary recommendations, secret stationery restocks, and a <strong>10% welcome coupon</strong> delivered to your inbox every Sunday.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email address..." class="newsletter-input" required>
+            <button type="submit" class="btn btn-teal">Subscribe ✨</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <span class="logo-icon">🖋️</span>
+            <span class="brand-text">Inkwell <span>&</span> Co.</span>
+          </a>
+          <p class="footer-tagline">Where every page is an adventure. An independent, woman-owned bookstore and stationery studio founded in 2021.</p>
+          <div class="footer-social-row">
+            <a href="#" class="social-icon-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-icon-link" aria-label="Pinterest">📌</a>
+            <a href="#" class="social-icon-link" aria-label="Goodreads">📚</a>
+            <a href="#" class="social-icon-link" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Shop Aisle</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=Fiction+books">Fiction Books</a></li>
+            <li><a href="shop.html?category=Non-Fiction+books">Non-Fiction Books</a></li>
+            <li><a href="shop.html?category=Children%27s+books">Children's Picture Books</a></li>
+            <li><a href="shop.html?category=Notebooks">Dot Grid Notebooks</a></li>
+            <li><a href="shop.html?category=Pens">Brass & Gel Pens</a></li>
+            <li><a href="shop.html?category=Washi+tape">Washi Tape & Stickers</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="about.html#team">Meet the Bookworms</a></li>
+            <li><a href="contact.html">Store Location & Hours</a></li>
+            <li><a href="contact.html#faq">Shipping & FAQ</a></li>
+            <li><a href="cart.html">View Cart</a></li>
+            <li><a href="login.html">My Account</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Visit Our Shop</h4>
+          <p style="color:#B0A89C; font-size:0.92rem; margin-bottom: 0.75rem;">
+            📍 42 Storybook Lane<br>Inkwood Village, NY 10014
+          </p>
+          <p style="color:#B0A89C; font-size:0.92rem; margin-bottom: 0.75rem;">
+            🕒 Mon – Sat: 9:00 AM – 7:30 PM<br>Sunday: 10:00 AM – 5:00 PM
+          </p>
+          <p style="color:#B0A89C; font-size:0.92rem;">
+            📞 (555) 732-3486<br>✉️ hello@inkwellco.com
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Inkwell & Co. Books & Stationery. All rights reserved.</p>
+        <p>Crafted with 💛, warm tea, and lots of paper love.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

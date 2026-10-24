@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Inkwell & Co.</title>
+  <meta name="description" content="Complete your purchase with our secure multi-step checkout.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖋️</text></svg>">
+</head>
+<body>
+
+  <!-- Top Announcement Promo Strip -->
+  <div class="promo-strip">
+    Free shipping on orders over $35! <span>Use code HAPPYPAGES for 10% off</span> ✨
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-icon">🖋️</span>
+        <span class="brand-text">Inkwell <span>&</span> Co.</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="login.html" class="nav-icon-btn" title="Account / Sign In" aria-label="Account">
+          👤
+        </a>
+        <a href="cart.html" class="cart-btn" aria-label="View shopping cart">
+          <span>🛒</span>
+          <span>Cart</span>
+          <span class="cart-badge">0</span>
+        </a>
+        <button class="hamburger-btn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer">
+    <a href="index.html" class="nav-link">Home 🏡</a>
+    <a href="shop.html" class="nav-link">Shop All Products 📚</a>
+    <a href="about.html" class="nav-link">Our Story ☕</a>
+    <a href="contact.html" class="nav-link">Get in Touch 💌</a>
+    <a href="login.html" class="nav-link">Member Sign In 👤</a>
+    <a href="cart.html" class="nav-link">Shopping Cart 🛒</a>
+  </aside>
+
+  <main>
+    <section class="checkout-section" id="checkout-wizard">
+      <div class="container">
+        <!-- Step Indicators -->
+        <div class="checkout-steps-bar">
+          <div id="step-ind-1" class="step-indicator active">
+            <div class="step-circle">1</div>
+            <span class="step-label">Shipping</span>
+          </div>
+
+          <div id="step-line-1" class="step-line"></div>
+
+          <div id="step-ind-2" class="step-indicator">
+            <div class="step-circle">2</div>
+            <span class="step-label">Payment</span>
+          </div>
+
+          <div id="step-line-2" class="step-line"></div>
+
+          <div id="step-ind-3" class="step-indicator">
+            <div class="step-circle">3</div>
+            <span class="step-label">Confirmation</span>
+          </div>
+        </div>
+
+        <div class="checkout-grid">
+          <!-- Wizard Forms Column -->
+          <div>
+            <!-- STEP 1: SHIPPING -->
+            <div id="checkout-step-1" class="checkout-form-card">
+              <h2 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Shipping Details 📦</h2>
+              <p class="text-muted" style="margin-bottom: 2rem;">Where should we deliver your cozy package?</p>
+
+              <form id="shipping-form">
+                <div class="form-grid">
+                  <div>
+                    <label class="form-label" for="ship-first-name">First Name *</label>
+                    <input type="text" id="ship-first-name" class="form-input" placeholder="Eleanor" required>
+                  </div>
+                  <div>
+                    <label class="form-label" for="ship-last-name">Last Name *</label>
+                    <input type="text" id="ship-last-name" class="form-input" placeholder="Vance" required>
+                  </div>
+                  <div>
+                    <label class="form-label" for="ship-email">Email Address *</label>
+                    <input type="email" id="ship-email" class="form-input" placeholder="eleanor@example.com" required>
+                  </div>
+                  <div>
+                    <label class="form-label" for="ship-phone">Phone Number *</label>
+                    <input type="tel" id="ship-phone" class="form-input" placeholder="(555) 234-5678" required>
+                  </div>
+                  <div class="form-group col-full">
+                    <label class="form-label" for="ship-address">Street Address *</label>
+                    <input type="text" id="ship-address" class="form-input" placeholder="42 Mulberry Lane, Apt 3B" required>
+                  </div>
+                  <div>
+                    <label class="form-label" for="ship-city">City *</label>
+                    <input type="text" id="ship-city" class="form-input" placeholder="Portland" required>
+                  </div>
+                  <div>
+                    <label class="form-label" for="ship-state">State / Province *</label>
+                    <input type="text" id="ship-state" class="form-input" placeholder="Oregon" required>
+                  </div>
+                  <div>
+                    <label class="form-label" for="ship-zip">Postal / ZIP Code *</label>
+                    <input type="text" id="ship-zip" class="form-input" placeholder="97201" required>
+                  </div>
+                  <div>
+                    <label class="form-label" for="ship-country">Country *</label>
+                    <select id="ship-country" class="form-select">
+                      <option value="US">United States</option>
+                      <option value="CA">Canada</option>
+                      <option value="UK">United Kingdom</option>
+                      <option value="AU">Australia</option>
+                    </select>
+                  </div>
+                </div>
+
+                <h4 style="font-size:1.15rem; margin-bottom: 1rem; margin-top: 1rem;">Choose Shipping Speed</h4>
+                <div class="shipping-options">
+                  <label class="shipping-option selected">
+                    <div class="shipping-option-left">
+                      <input type="radio" name="shipping_method" value="standard" checked>
+                      <div>
+                        <strong>Cozy Standard Shipping (3–5 business days)</strong>
+                        <p style="font-size:0.82rem; color:var(--color-muted); margin:0;">Tracked USPS delivery in plastic-free mailers</p>
+                      </div>
+                    </div>
+                    <span class="fw-bold text-teal">Included</span>
+                  </label>
+
+                  <label class="shipping-option">
+                    <div class="shipping-option-left">
+                      <input type="radio" name="shipping_method" value="express">
+                      <div>
+                        <strong>Bookworm Priority Express (1–2 business days)</strong>
+                        <p style="font-size:0.82rem; color:var(--color-muted); margin:0;">Hand-dispatched today with priority air courier</p>
+                      </div>
+                    </div>
+                    <span class="fw-bold">+$9.99</span>
+                  </label>
+                </div>
+
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:2rem;">
+                  <a href="cart.html" class="btn btn-outline">← Back to Cart</a>
+                  <button type="button" id="btn-to-payment" class="btn btn-teal btn-lg">
+                    Continue to Payment →
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- STEP 2: PAYMENT -->
+            <div id="checkout-step-2" class="checkout-form-card" style="display: none;">
+              <h2 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Payment Method 💳</h2>
+              <p class="text-muted" style="margin-bottom: 2rem;">All transactions are encrypted with bank-grade 256-bit SSL security.</p>
+
+              <form id="payment-form">
+                <div class="form-grid">
+                  <div class="form-group col-full">
+                    <label class="form-label" for="pay-card-num">Card Number *</label>
+                    <input type="text" id="pay-card-num" class="form-input" placeholder="4242 •••• •••• 4242" maxlength="19" required>
+                  </div>
+                  <div class="form-group col-full">
+                    <label class="form-label" for="pay-card-name">Name on Card *</label>
+                    <input type="text" id="pay-card-name" class="form-input" placeholder="Eleanor Vance" required>
+                  </div>
+                  <div>
+                    <label class="form-label" for="pay-card-exp">Expiration Date (MM/YY) *</label>
+                    <input type="text" id="pay-card-exp" class="form-input" placeholder="12/28" maxlength="5" required>
+                  </div>
+                  <div>
+                    <label class="form-label" for="pay-card-cvv">Security Code (CVV) *</label>
+                    <input type="password" id="pay-card-cvv" class="form-input" placeholder="•••" maxlength="4" required>
+                  </div>
+                </div>
+
+                <label class="filter-item" style="margin-bottom: 2rem;">
+                  <input type="checkbox" checked>
+                  <span>Billing address matches shipping address</span>
+                </label>
+
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:2rem;">
+                  <button type="button" id="btn-back-shipping" class="btn btn-outline">← Back to Shipping</button>
+                  <button type="button" id="btn-place-order" class="btn btn-accent btn-lg">
+                    Place Order Now 🎁
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- STEP 3: CONFIRMATION -->
+            <div id="checkout-step-3" class="confirmation-card" style="display: none;">
+              <div class="conf-icon">🎉</div>
+              <h2 style="font-size: 2.4rem; margin-bottom: 0.5rem;">Order Placed!</h2>
+              <p style="font-size: 1.1rem; color: var(--color-ink-light);">
+                Thank you so much for supporting our independent bookstore! We are preparing your treasures with warm care and a handmade bookmark.
+              </p>
+
+              <div>
+                <span class="conf-order-num">Order Reference: <strong id="confirmation-order-id">INK-000000</strong></span>
+              </div>
+
+              <div style="background-color: var(--color-cream); border-radius: var(--radius-lg); padding: 1.5rem; text-align: left; margin: 1.5rem 0 2.5rem; border: 1.5px solid var(--color-border);">
+                <h4 style="margin-bottom: 0.5rem; font-size: 1.05rem;">What happens next?</h4>
+                <ul style="list-style: disc; padding-left: 1.25rem; font-size: 0.92rem; color: var(--color-ink-light); display: flex; flex-direction: column; gap: 0.4rem;">
+                  <li>A confirmation email and receipt have been dispatched to your inbox.</li>
+                  <li>Our bibliophiles will wrap your books in plastic-free archival kraft paper.</li>
+                  <li>You will receive live tracking as soon as your package leaves our village shop.</li>
+                </ul>
+              </div>
+
+              <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="shop.html" class="btn btn-teal btn-lg">Continue Exploring Books 📖</a>
+                <a href="index.html" class="btn btn-outline btn-lg">Back to Home</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Checkout Sidebar Summary Column -->
+          <aside id="checkout-sidebar-col" class="order-summary-box">
+            <h3>Order Preview</h3>
+
+            <div id="checkout-summary-items" style="max-height: 240px; overflow-y: auto; margin-bottom: 1.5rem; padding-right: 0.5rem;">
+              <!-- Cart items preview -->
+            </div>
+
+            <div class="summary-rows">
+              <div class="summary-row">
+                <span>Items Subtotal</span>
+                <span id="checkout-subtotal" class="fw-bold">$0.00</span>
+              </div>
+              <div class="summary-row discount-row">
+                <span>Discount</span>
+                <span id="checkout-discount">-$0.00</span>
+              </div>
+              <div class="summary-row">
+                <span>Estimated Shipping</span>
+                <span id="checkout-shipping" class="fw-bold">$4.99</span>
+              </div>
+              <div class="summary-row total-row">
+                <span>Total</span>
+                <span id="checkout-total">$0.00</span>
+              </div>
+            </div>
+
+            <div style="background-color: var(--color-cream); border-radius: var(--radius-md); padding: 0.9rem; font-size: 0.82rem; color: var(--color-muted); text-align: center; margin-top: 1.5rem;">
+              🌱 Every order plants a wildflower meadow patch through our eco-grant.
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <span class="logo-icon">🖋️</span>
+            <span class="brand-text">Inkwell <span>&</span> Co.</span>
+          </a>
+          <p class="footer-tagline">Where every page is an adventure. An independent bookstore and stationery studio founded with warm tea & big dreams.</p>
+          <div class="footer-social-row">
+            <a href="#" class="social-icon-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-icon-link" aria-label="Pinterest">📌</a>
+            <a href="#" class="social-icon-link" aria-label="Goodreads">📚</a>
+            <a href="#" class="social-icon-link" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Shop Aisle</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=Fiction+books">Fiction Books</a></li>
+            <li><a href="shop.html?category=Non-Fiction+books">Non-Fiction Books</a></li>
+            <li><a href="shop.html?category=Notebooks">Dot Grid Notebooks</a></li>
+            <li><a href="shop.html?category=Pens">Brass Fountain Pens</a></li>
+            <li><a href="shop.html?category=Planners">Life Planners</a></li>
+            <li><a href="shop.html?category=Washi+tape">Washi Tape</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="about.html#team">Meet the Bookworms</a></li>
+            <li><a href="contact.html">Store Location & Hours</a></li>
+            <li><a href="contact.html#faq">Shipping & FAQ</a></li>
+            <li><a href="cart.html">View Cart</a></li>
+            <li><a href="login.html">My Account</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Visit Our Shop</h4>
+          <p style="color:#B0A89C; font-size:0.92rem; margin-bottom: 0.75rem;">
+            📍 42 Storybook Lane<br>Inkwood Village, NY 10014
+          </p>
+          <p style="color:#B0A89C; font-size:0.92rem; margin-bottom: 0.75rem;">
+            🕒 Mon – Sat: 9:00 AM – 7:30 PM<br>Sunday: 10:00 AM – 5:00 PM
+          </p>
+          <p style="color:#B0A89C; font-size:0.92rem;">
+            📞 (555) 732-3486<br>✉️ hello@inkwellco.com
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Inkwell & Co. Books & Stationery. All rights reserved.</p>
+        <p>Crafted with 💛, warm tea, and lots of paper love.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

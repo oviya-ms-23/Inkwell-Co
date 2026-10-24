@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop All Products | Inkwell & Co.</title>
+  <meta name="description" content="Browse our complete collection of fiction, non-fiction, children's books, journals, fountain pens, planners, washi tape, and stationery.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖋️</text></svg>">
+</head>
+<body>
+
+  <!-- Top Announcement Promo Strip -->
+  <div class="promo-strip">
+    Free shipping on orders over $35! <span>Use code HAPPYPAGES for 10% off</span> ✨
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-icon">🖋️</span>
+        <span class="brand-text">Inkwell <span>&</span> Co.</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link active">Shop</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="login.html" class="nav-icon-btn" title="Account / Sign In" aria-label="Account">
+          👤
+        </a>
+        <a href="cart.html" class="cart-btn" aria-label="View shopping cart">
+          <span>🛒</span>
+          <span>Cart</span>
+          <span class="cart-badge">0</span>
+        </a>
+        <button class="hamburger-btn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer">
+    <a href="index.html" class="nav-link">Home 🏡</a>
+    <a href="shop.html" class="nav-link active">Shop All Products 📚</a>
+    <a href="about.html" class="nav-link">Our Story ☕</a>
+    <a href="contact.html" class="nav-link">Get in Touch 💌</a>
+    <a href="login.html" class="nav-link">Member Sign In 👤</a>
+    <a href="cart.html" class="nav-link">Shopping Cart 🛒</a>
+  </aside>
+
+  <main>
+    <!-- Header Banner -->
+    <header class="shop-page-header">
+      <div class="container">
+        <span class="section-subtitle">Catalog</span>
+        <h1 class="section-title">The Paper & Book Collection</h1>
+        <p class="section-desc">Handcrafted notebooks, captivating stories, smooth inks, and cozy gifts made to inspire daily creativity.</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="shop-layout">
+        <!-- Sidebar Filters -->
+        <aside class="shop-sidebar">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; padding-bottom:1rem; border-bottom: 2px solid var(--color-border);">
+            <h3 style="font-size:1.3rem;">Filters</h3>
+            <button id="reset-filters-btn" class="btn btn-outline-teal btn-sm" style="padding:0.25rem 0.65rem; font-size:0.8rem;">Reset All</button>
+          </div>
+
+          <!-- Category Filters -->
+          <div class="sidebar-section">
+            <h4 class="sidebar-heading">Categories</h4>
+            <div id="category-filters" class="filter-list">
+              <!-- Dynamically populated from PRODUCTS categories -->
+            </div>
+          </div>
+
+          <!-- Special Collections / Badges -->
+          <div class="sidebar-section">
+            <h4 class="sidebar-heading">Collections & Tags</h4>
+            <div id="badge-filters" class="filter-list">
+              <label class="filter-item">
+                <input type="checkbox" name="badge" value="Bestseller">
+                <span>⭐ Bestsellers</span>
+              </label>
+              <label class="filter-item">
+                <input type="checkbox" name="badge" value="Sale">
+                <span>🏷️ On Sale</span>
+              </label>
+              <label class="filter-item">
+                <input type="checkbox" name="badge" value="New">
+                <span>✨ New Arrivals</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Price Range Filter -->
+          <div class="sidebar-section">
+            <h4 class="sidebar-heading">Max Price</h4>
+            <div class="price-slider-wrap">
+              <input type="range" id="price-range" min="5" max="35" step="1" value="35">
+              <div class="price-slider-values">
+                <span>$5</span>
+                <span id="price-value" style="color:var(--color-teal-dark); font-weight:800;">$35</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shipping Notice -->
+          <div style="background-color: var(--color-cream); padding: 1rem; border-radius: var(--radius-md); border: 1.5px dashed var(--color-border-dark); font-size: 0.85rem; text-align: center;">
+            <span style="font-size:1.3rem; display:block; margin-bottom:0.25rem;">📬</span>
+            <strong>Free Standard Shipping</strong> on domestic orders over $35!
+          </div>
+        </aside>
+
+        <!-- Shop Main Products Column -->
+        <section>
+          <!-- Toolbar (Search & Sort) -->
+          <div class="shop-toolbar">
+            <div class="search-box">
+              <span>🔍</span>
+              <input type="text" id="shop-search" placeholder="Search books, pens, journals..." aria-label="Search products">
+            </div>
+
+            <div id="results-count" style="font-size:0.92rem; color:var(--color-muted); font-weight:600;">
+              Showing 18 products
+            </div>
+
+            <div class="sort-group">
+              <label for="sort-select" style="font-weight:700;">Sort By:</label>
+              <select id="sort-select" class="sort-select">
+                <option value="featured">Featured / Curated</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Highest Rated</option>
+                <option value="name-asc">Alphabetical (A–Z)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Active Filter Tag Chips -->
+          <div id="active-filters" class="active-filters"></div>
+
+          <!-- Dynamic Product Grid -->
+          <div id="shop-products-grid" class="products-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <!-- Products rendered dynamically -->
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <span class="logo-icon">🖋️</span>
+            <span class="brand-text">Inkwell <span>&</span> Co.</span>
+          </a>
+          <p class="footer-tagline">Where every page is an adventure. An independent bookstore and stationery studio founded with warm tea & big dreams.</p>
+          <div class="footer-social-row">
+            <a href="#" class="social-icon-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-icon-link" aria-label="Pinterest">📌</a>
+            <a href="#" class="social-icon-link" aria-label="Goodreads">📚</a>
+            <a href="#" class="social-icon-link" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Shop Aisle</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=Fiction+books">Fiction Books</a></li>
+            <li><a href="shop.html?category=Non-Fiction+books">Non-Fiction Books</a></li>
+            <li><a href="shop.html?category=Children%27s+books">Children's Books</a></li>
+            <li><a href="shop.html?category=Notebooks">Dot Grid Notebooks</a></li>
+            <li><a href="shop.html?category=Pens">Brass Fountain Pens</a></li>
+            <li><a href="shop.html?category=Planners">Life Planners</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="about.html#team">Meet the Bookworms</a></li>
+            <li><a href="contact.html">Store Location & Hours</a></li>
+            <li><a href="contact.html#faq">Shipping & FAQ</a></li>
+            <li><a href="cart.html">View Cart</a></li>
+            <li><a href="login.html">My Account</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Visit Our Shop</h4>
+          <p style="color:#B0A89C; font-size:0.92rem; margin-bottom: 0.75rem;">
+            📍 42 Storybook Lane<br>Inkwood Village, NY 10014
+          </p>
+          <p style="color:#B0A89C; font-size:0.92rem; margin-bottom: 0.75rem;">
+            🕒 Mon – Sat: 9:00 AM – 7:30 PM<br>Sunday: 10:00 AM – 5:00 PM
+          </p>
+          <p style="color:#B0A89C; font-size:0.92rem;">
+            📞 (555) 732-3486<br>✉️ hello@inkwellco.com
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Inkwell & Co. Books & Stationery. All rights reserved.</p>
+        <p>Crafted with 💛, warm tea, and lots of paper love.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
